@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定商取引法に基づく表記｜本音ルーム</title>
+<link rel="icon" type="image/png" href="https://honneroom.com/assets/icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #2a1f1a;
+    --cream: #faf6f0;
+    --terra: #b85c38;
+    --mist: #9a8880;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.8;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250,246,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(42,31,26,0.08);
+  }
+  .nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo-mark {
+    width: 28px; height: 28px;
+    background: var(--terra);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: white;
+    flex-shrink: 0;
+  }
+  .nav-back {
+    font-size: 13px;
+    color: var(--mist);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--terra); }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 48px 120px;
+  }
+  .page-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-label::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--terra);
+    opacity: 0.5;
+  }
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .date { font-size: 13px; color: var(--mist); margin-bottom: 56px; letter-spacing: 0.04em; }
+  .lead {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #6a5550;
+    font-weight: 300;
+    margin-bottom: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(42,31,26,0.08);
+  }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 48px; }
+  tr { border-bottom: 1px solid rgba(42,31,26,0.08); }
+  tr:first-child { border-top: 1px solid rgba(42,31,26,0.08); }
+  th {
+    width: 200px;
+    padding: 20px 16px 20px 0;
+    text-align: left;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  td {
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #5a4840;
+    font-weight: 300;
+    vertical-align: top;
+  }
+  td a { color: var(--terra); }
+  footer {
+    background: var(--ink);
+    color: rgba(250,246,240,0.5);
+    padding: 48px;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--cream);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 24px;
+  }
+  .footer-logo-mark {
+    width: 22px; height: 22px;
+    background: var(--terra);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: white;
+  }
+  .footer-links { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 24px; }
+  .footer-links a { color: rgba(250,246,240,0.4); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-copy { font-size: 11px; letter-spacing: 0.04em; }
+  @media (max-width: 700px) {
+    nav { padding: 16px 20px; }
+    .container { padding: 48px 20px 80px; }
+    th { width: 120px; font-size: 13px; white-space: normal; }
+    td { font-size: 13px; }
+    footer { padding: 40px 20px; }
+    .footer-links { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-mark">本</div>
+    本音ルーム
+  </a>
+  <a href="/" class="nav-back">← トップへ戻る</a>
+</nav>
+
+<div class="container">
+  <div class="page-label">Legal</div>
+  <h1>特定商取引法に基づく表記</h1>
+  <p class="date">制定日：2026年3月13日</p>
+
+  <p class="lead">本ページは、本音ルーム上で提供されるサブスクリプション型のデジタルサービスに適用されます。</p>
+
+  <table>
+    <tr>
+      <th>事業者名</th>
+      <td>本音ルーム（個人事業）</td>
+    </tr>
+    <tr>
+      <th>運営責任者</th>
+      <td>宮本 夏美</td>
+    </tr>
+    <tr>
+      <th>住所</th>
+      <td>個人事業主のため、住所の公開は控えておりますが、請求があった場合には速やかに開示いたします。</td>
+    </tr>
+    <tr>
+      <th>電話番号</th>
+      <td>個人事業主のため、電話番号の公開は控えておりますが、請求があった場合には速やかに開示いたします。通常のお問い合わせは<a href="/contact.html">お問い合わせページ</a>よりご連絡ください。</td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td>support@honne-room.com<br><small style="color:#9a8880;">※特定商取引法に基づく申立専用窓口。通常のお問い合わせは下記お問い合わせ窓口へ。</small></td>
+    </tr>
+    <tr>
+      <th>ウェブサイト URL</th>
+      <td><a href="https://honne-room.com/">https://honne-room.com/</a></td>
+    </tr>
+    <tr>
+      <th>お問い合わせ窓口</th>
+      <td><a href="/contact.html">お問い合わせページ</a>よりご連絡ください。通常2〜3営業日以内に返信いたします。</td>
+    </tr>
+    <tr>
+      <th>サービス内容</th>
+      <td>仕事・恋愛・結婚・お金・将来など人生の悩みについて相談・意見交換ができる女性向けプラットフォーム</td>
+    </tr>
+    <tr>
+      <th>価格</th>
+      <td>各プランの販売価格は、決済画面に表示された金額（消費税込み）となります。</td>
+    </tr>
+    <tr>
+      <th>追加手数料</th>
+      <td>商品・サービスの代金以外に追加でご負担いただく手数料はありません。なお、インターネット接続に伴う通信料はお客様のご負担となります。</td>
+    </tr>
+    <tr>
+      <th>利用可能な決済手段</th>
+      <td>クレジットカード決済（Stripe）</td>
+    </tr>
+    <tr>
+      <th>決済期間</th>
+      <td>クレジットカード決済は、お申し込み時にただちに処理されます。サブスクリプションプランの場合は、契約更新日に自動的に決済が行われます。</td>
+    </tr>
+    <tr>
+      <th>サービス提供時期</th>
+      <td>決済完了後ただちにサービスをご利用いただけます。</td>
+    </tr>
+    <tr>
+      <th>返品・返金ポリシー</th>
+      <td>デジタルサービスの特性上、購入手続き完了後のお客様都合による返金はお受けしておりません。サービスの不具合が発生した場合は、上記お問い合わせ窓口までご連絡ください。</td>
+    </tr>
+    <tr>
+      <th>解約について</th>
+      <td>いつでも解約可能です。解約時点でサービスのご利用ができなくなります。違約金は一切ございません。</td>
+    </tr>
+    <tr>
+      <th>動作環境</th>
+      <td>最新版の主要なウェブブラウザ（Chrome・Safari・Firefox・Edge）でのご利用を推奨します。スマートフォン・タブレット・PCに対応しています。</td>
+    </tr>
+  </table>
+</div>
+
+<footer>
+  <a href="/" class="footer-logo">
+    <div class="footer-logo-mark">本</div>
+    本音ルーム
+  </a>
+  <div class="footer-links">
+    <a href="/terms.html">利用規約</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/legal.html">特定商取引法に基づく表記</a>
+    <a href="/contact.html">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2026 本音ルーム. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
