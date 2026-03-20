@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー｜本音ルーム</title>
+<link rel="icon" type="image/png" href="https://honneroom.com/assets/icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #2a1f1a;
+    --cream: #faf6f0;
+    --warm: #f2ebe0;
+    --terra: #b85c38;
+    --terra-light: #d4795a;
+    --terra-pale: #f5ddd5;
+    --mist: #9a8880;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.8;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250,246,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(42,31,26,0.08);
+  }
+  .nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo-mark {
+    width: 28px; height: 28px;
+    background: var(--terra);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: white;
+    flex-shrink: 0;
+  }
+  .nav-back {
+    font-size: 13px;
+    color: var(--mist);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--terra); }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 48px 120px;
+  }
+  .page-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-label::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--terra);
+    opacity: 0.5;
+  }
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .date { font-size: 13px; color: var(--mist); margin-bottom: 56px; letter-spacing: 0.04em; }
+  .lead {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #6a5550;
+    font-weight: 300;
+    margin-bottom: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(42,31,26,0.08);
+  }
+  h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 48px 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--terra);
+  }
+  p { font-size: 14px; line-height: 1.9; color: #5a4840; font-weight: 300; margin-bottom: 12px; }
+  ol, ul { padding-left: 20px; margin-bottom: 12px; }
+  li { font-size: 14px; line-height: 1.9; color: #5a4840; font-weight: 300; margin-bottom: 6px; }
+  a { color: var(--terra); }
+  footer {
+    background: var(--ink);
+    color: rgba(250,246,240,0.5);
+    padding: 48px;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--cream);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 24px;
+  }
+  .footer-logo-mark {
+    width: 22px; height: 22px;
+    background: var(--terra);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: white;
+  }
+  .footer-links { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 24px; }
+  .footer-links a { color: rgba(250,246,240,0.4); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-copy { font-size: 11px; letter-spacing: 0.04em; }
+  @media (max-width: 700px) {
+    nav { padding: 16px 20px; }
+    .container { padding: 48px 20px 80px; }
+    footer { padding: 40px 20px; }
+    .footer-links { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-mark">本</div>
+    本音ルーム
+  </a>
+  <a href="/" class="nav-back">← トップへ戻る</a>
+</nav>
+
+<div class="container">
+  <div class="page-label">Legal</div>
+  <h1>プライバシーポリシー</h1>
+  <p class="date">制定日：2026年3月13日</p>
+
+  <p class="lead">本プライバシーポリシー（以下「本ポリシー」といいます。）は、本音ルーム（以下「本サービス」といいます。）におけるユーザー情報の取扱いについて定めるものです。</p>
+
+  <h2>第1条（適用範囲）</h2>
+  <p>本ポリシーは、本サービスにおいて取得する全てのユーザー情報に適用されます。</p>
+
+  <h2>第2条（取得する情報）</h2>
+  <ol>
+    <li>メールアドレス（アカウント作成・認証用）</li>
+    <li>ユーザーが任意で登録したプロフィール属性情報（年齢・働き方・婚活状況等）</li>
+    <li>ユーザーが投稿したスレッド・返信・リアクション等のコンテンツ</li>
+    <li>Stripeが保持する決済情報（カード番号等は当運営者には提供されません）</li>
+    <li>ログイン記録、利用履歴、アクセスログ</li>
+    <li>通報・お問い合わせ内容</li>
+  </ol>
+
+  <h2>第3条（利用目的）</h2>
+  <ol>
+    <li>本サービスの提供・運営・改善</li>
+    <li>認証・セキュリティの確保</li>
+    <li>有料プランの決済処理</li>
+    <li>通報内容の確認・対応</li>
+    <li>お問い合わせ対応</li>
+    <li>利用状況の分析</li>
+    <li>サービスに関するお知らせの送信</li>
+  </ol>
+
+  <h2>第4条（プロフィール属性情報について）</h2>
+  <p>ユーザーが任意で登録したプロフィール属性情報（年齢・働き方・婚活状況・子どもの有無等）は、投稿・返信時に他のユーザーに表示されます。登録は任意であり、いつでも変更・削除が可能です。</p>
+
+  <h2>第5条（第三者提供）</h2>
+  <p>法令に基づく場合を除き、ユーザー情報を第三者へ提供しません。</p>
+
+  <h2>第6条（外部サービスの利用）</h2>
+  <ul>
+    <li>認証・データベース：Supabase（<a href="https://supabase.com/privacy">プライバシーポリシー</a>）</li>
+    <li>決済：Stripe（<a href="https://stripe.com/jp/privacy">プライバシーポリシー</a>）</li>
+    <li>アクセス解析：必要に応じてGoogle Analytics等</li>
+  </ul>
+
+  <h2>第7条（情報の保存期間）</h2>
+  <p>アカウント情報は、利用期間中および削除後に法令上必要な期間に限り保存します。決済履歴はStripeが法令に従って管理します。</p>
+
+  <h2>第8条（ユーザーの権利）</h2>
+  <p>ユーザーは、自身の情報の開示・訂正・削除等を求めることができます。ご希望の場合は<a href="/contact.html">お問い合わせページ</a>よりご連絡ください。</p>
+
+  <h2>第9条（Cookieについて）</h2>
+  <p>本サービスはログイン状態の保持等のためにCookieを使用します。ブラウザの設定によりCookieを無効にすることができますが、一部機能が利用できなくなる場合があります。</p>
+
+  <h2>第10条（ポリシーの変更）</h2>
+  <p>本ポリシーは、必要に応じて変更される場合があります。変更後は本サービス上に掲示した時点から効力を生じるものとします。</p>
+</div>
+
+<footer>
+  <a href="/" class="footer-logo">
+    <div class="footer-logo-mark">本</div>
+    本音ルーム
+  </a>
+  <div class="footer-links">
+    <a href="/terms.html">利用規約</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/legal.html">特定商取引法に基づく表記</a>
+    <a href="/contact.html">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2026 本音ルーム. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
