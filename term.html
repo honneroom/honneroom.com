@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>利用規約｜本音ルーム</title>
+<link rel="icon" type="image/png" href="https://honneroom.com/assets/icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #2a1f1a;
+    --cream: #faf6f0;
+    --warm: #f2ebe0;
+    --terra: #b85c38;
+    --terra-light: #d4795a;
+    --mist: #9a8880;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.8;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250,246,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(42,31,26,0.08);
+  }
+  .nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo-mark {
+    width: 28px; height: 28px;
+    background: var(--terra);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: white;
+    flex-shrink: 0;
+  }
+  .nav-back {
+    font-size: 13px;
+    color: var(--mist);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--terra); }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 48px 120px;
+  }
+  .page-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-label::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--terra);
+    opacity: 0.5;
+  }
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .date { font-size: 13px; color: var(--mist); margin-bottom: 56px; letter-spacing: 0.04em; }
+  .lead {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #6a5550;
+    font-weight: 300;
+    margin-bottom: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(42,31,26,0.08);
+  }
+  h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 48px 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--terra);
+  }
+  p { font-size: 14px; line-height: 1.9; color: #5a4840; font-weight: 300; margin-bottom: 12px; }
+  ol, ul { padding-left: 20px; margin-bottom: 12px; }
+  li { font-size: 14px; line-height: 1.9; color: #5a4840; font-weight: 300; margin-bottom: 6px; }
+  a { color: var(--terra); }
+  footer {
+    background: var(--ink);
+    color: rgba(250,246,240,0.5);
+    padding: 48px;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--cream);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 24px;
+  }
+  .footer-logo-mark {
+    width: 22px; height: 22px;
+    background: var(--terra);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: white;
+  }
+  .footer-links { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 24px; }
+  .footer-links a { color: rgba(250,246,240,0.4); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-copy { font-size: 11px; letter-spacing: 0.04em; }
+  @media (max-width: 700px) {
+    nav { padding: 16px 20px; }
+    .container { padding: 48px 20px 80px; }
+    footer { padding: 40px 20px; }
+    .footer-links { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-mark">本</div>
+    本音ルーム
+  </a>
+  <a href="/" class="nav-back">← トップへ戻る</a>
+</nav>
+
+<div class="container">
+  <div class="page-label">Legal</div>
+  <h1>利用規約</h1>
+  <p class="date">制定日：2026年3月13日</p>
+
+  <p class="lead">本利用規約（以下「本規約」といいます。）は、本音ルーム（以下「本サービス」といいます。）の利用条件を定めるものです。本サービスの利用にあたり、ユーザーは本規約に同意のうえ利用登録を行うものとします。</p>
+
+  <h2>第1条（適用）</h2>
+  <p>本規約は、本サービスの利用に関する一切に適用されます。</p>
+
+  <h2>第2条（定義）</h2>
+  <ol>
+    <li>「ユーザー」：本サービスを利用する個人</li>
+    <li>「会員」：メールアドレスによりアカウントが作成された者</li>
+    <li>「有料会員」：Stripe決済を通じて有料プランを契約した会員</li>
+    <li>「投稿」：本サービス上でユーザーが作成したスレッド・返信・プロフィール情報等のコンテンツ</li>
+  </ol>
+
+  <h2>第3条（女性限定サービスについて）</h2>
+  <p>本サービスは女性を対象としたサービスです。登録にあたり、ユーザーは自身が女性であることを自己申告のうえ同意するものとします。</p>
+  <p>虚偽の申告が判明した場合、当運営者は事前通知なくアカウントを停止・削除できるものとします。</p>
+
+  <h2>第4条（登録）</h2>
+  <p>ユーザーは、メールアドレスを用いてアカウント登録を行うことができます。登録時に本規約および女性限定サービスである旨への同意が必要です。</p>
+
+  <h2>第5条（アカウント管理）</h2>
+  <p>アカウント情報および利用端末等の管理はユーザーの責任で行うものとします。第三者によるアカウントの不正利用について、当運営者は責任を負いません。</p>
+
+  <h2>第6条（サービス内容）</h2>
+  <p>本サービスは、仕事・恋愛・結婚・お金・将来など人生の悩みについて、属性情報を任意で公開したうえで相談・意見交換ができる女性向けプラットフォームを提供します。無料会員と有料会員で利用できる範囲は異なります。</p>
+  <ul>
+    <li>無料会員：投稿の閲覧、検索、ブックマーク</li>
+    <li>有料会員：上記に加え、スレッド投稿・返信・プロフィール属性タグの設定・リアクション</li>
+  </ul>
+
+  <h2>第7条（料金と支払い）</h2>
+  <p>有料会員は、当サービスが指定する料金をStripe決済により支払うものとします。料金は決済画面に表示された金額（消費税込み）とします。</p>
+
+  <h2>第8条（解約）</h2>
+  <p>ユーザーは、いつでもサブスクリプションを解約できます。解約時点でサービスのご利用ができなくなります。既に支払い済み期間の返金は行いません。</p>
+
+  <h2>第9条（禁止事項）</h2>
+  <ol>
+    <li>女性以外の者による登録・利用</li>
+    <li>他のユーザーへの誹謗中傷・個人攻撃・ハラスメント行為</li>
+    <li>個人情報（氏名・住所・電話番号等）の無断掲載</li>
+    <li>スパム・宣伝・勧誘目的の投稿</li>
+    <li>性的・暴力的・差別的なコンテンツの投稿</li>
+    <li>投稿内容の無断転載・複製・再配布</li>
+    <li>法令違反行為</li>
+    <li>不正アクセス、または本サービス運営を妨害する行為</li>
+    <li>その他、当運営者が不適切と判断する行為</li>
+  </ol>
+
+  <h2>第10条（通報機能）</h2>
+  <p>ユーザーは、禁止事項に該当すると思われる投稿を通報することができます。通報された投稿は当運営者が確認し、必要に応じて削除・アカウント停止等の対応を行います。悪意ある虚偽通報は禁止します。</p>
+
+  <h2>第11条（投稿内容の取扱い）</h2>
+  <p>ユーザーが投稿したコンテンツの著作権はユーザーに帰属しますが、当運営者はサービス運営・改善・宣伝に必要な範囲で無償で利用できるものとします。</p>
+
+  <h2>第12条（知的財産権）</h2>
+  <p>本サービスのデザイン・システム・コンテンツの著作権および関連する知的財産権は当運営者または権利者に帰属します。</p>
+
+  <h2>第13条（免責）</h2>
+  <p>本サービスに関して発生した損害について、当運営者は責任を負わないものとします。ユーザー間のトラブルについても同様とします。本サービスで提供される情報・意見は個人の体験に基づくものであり、専門的なアドバイスの代替となるものではありません。</p>
+
+  <h2>第14条（サービスの変更・停止）</h2>
+  <p>当運営者は、事前通知なく本サービスの内容を変更または停止する場合があります。</p>
+
+  <h2>第15条（規約の変更）</h2>
+  <p>当運営者は、本規約を変更できるものとします。変更後の規約は本サービス上に掲示した時点から効力を生じるものとします。</p>
+</div>
+
+<footer>
+  <a href="/" class="footer-logo">
+    <div class="footer-logo-mark">本</div>
+    本音ルーム
+  </a>
+  <div class="footer-links">
+    <a href="/terms.html">利用規約</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/legal.html">特定商取引法に基づく表記</a>
+    <a href="/contact.html">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2026 本音ルーム. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
