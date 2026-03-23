@@ -270,7 +270,6 @@
   .thread-card:nth-child(1) { animation-delay: 0.3s; transform: rotate(-1deg); }
   .thread-card:nth-child(2) { animation-delay: 0.5s; transform: rotate(0.5deg); }
   .thread-card:nth-child(3) { animation-delay: 0.7s; transform: rotate(-0.5deg); }
-  .thread-card:nth-child(4) { animation-delay: 0.9s; transform: rotate(1deg); }
 
   @keyframes floatUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -502,6 +501,60 @@
 
   .feature-text {
     max-width: 640px;
+  }
+
+  .reaction-showcase {
+    margin-top: 48px;
+    padding: 28px 32px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 16px rgba(42,31,26,0.06);
+    max-width: 480px;
+  }
+
+  .reaction-label {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    color: var(--mist);
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+
+  .reaction-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .rpill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    background: var(--cream);
+    color: var(--ink);
+    border: 1px solid rgba(42,31,26,0.1);
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+    transition: all 0.2s;
+    cursor: default;
+  }
+
+  .rpill.active {
+    background: var(--terra-pale);
+    border-color: var(--terra);
+    color: var(--terra);
+  }
+
+  .reaction-note {
+    font-size: 12px;
+    color: var(--mist);
+    line-height: 1.7;
+    font-weight: 300;
   }
 
 
@@ -801,7 +854,7 @@
     <img src="https://honneroom.com/assets/icon.png" alt="本音ルーム" style="width:28px;height:28px;object-fit:contain;">
     本音ルーム
   </a>
-  <a href="#signup" class="nav-cta">無料で始める</a>
+  <a href="https://app.honneroom.com" class="nav-cta">無料で始める</a>
 </nav>
 
 <!-- HERO -->
@@ -817,7 +870,7 @@
       似た境遇の誰かとリアルにつながれる場所。
     </p>
     <div class="hero-actions">
-      <a href="#signup" class="btn-primary">無料で参加する</a>
+      <a href="https://app.honneroom.com" class="btn-primary">無料で参加する</a>
       <a href="#how" class="btn-ghost">詳しく見る →</a>
     </div>
     <p class="hero-note">✓ 女性限定　✓ 匿名OK　✓ 属性が見えるから安心</p>
@@ -851,18 +904,6 @@
 
       <div class="thread-card">
         <div class="thread-meta">
-          <div class="thread-avatar" style="background:#c8a882;">H</div>
-          <div class="thread-attr">
-            <strong>はるか / 26歳</strong>
-            個人事業主・独身・一人暮らし
-          </div>
-        </div>
-        <p class="thread-body">フリーランスの老後資金どうしてる？iDeCoとNISA以外に考えてることあれば聞きたい。</p>
-        <span class="thread-tag"># お金・将来</span>
-      </div>
-
-      <div class="thread-card">
-        <div class="thread-meta">
           <div class="thread-avatar" style="background:#a0756a;">A</div>
           <div class="thread-attr">
             <strong>あおい / 29歳</strong>
@@ -870,7 +911,7 @@
           </div>
         </div>
         <p class="thread-body">婚活2年目。条件が合う人ほど話が続かなくて…仕事を優先してきたことを後悔してる自分もいる。</p>
-        <span class="thread-tag"># 婚活</span>
+        <span class="thread-tag"># 恋愛</span>
       </div>
     </div>
   </div>
@@ -883,7 +924,7 @@
   <div>
     <div class="section-label">こんな悩み、ありませんか</div>
     <h2 class="section-title">正解のない問いを、<br>一人で検索し続けていませんか？</h2>
-    <p class="section-body">知恵袋でもXでも、似たような境遇の人の「その後」はわからない。誰が答えているのかもわからない。だから結局、決断できないまま時間が過ぎていく。</p>
+    <p class="section-body">掲示板やSNSでは、似たような境遇の人の「その後」はわからない。誰が答えているのかもわからない。だから結局、決断できないまま時間が過ぎていく。</p>
   </div>
 
   <div class="pain-list">
@@ -920,7 +961,7 @@
     <div class="how-item">
       <div class="how-step">01</div>
       <h3 class="how-title">プロフィールを設定する</h3>
-      <p class="how-desc">年齢・働き方・婚活状況・子どもの有無など、任意の属性を登録。匿名のまま、自分の輪郭だけを見せる。</p>
+      <p class="how-desc">年齢・働き方など、任意の属性を登録。匿名のまま、自分の輪郭だけを見せる。</p>
     </div>
     <div class="how-item">
       <div class="how-step">02</div>
@@ -930,7 +971,7 @@
     <div class="how-item">
       <div class="how-step">03</div>
       <h3 class="how-title">属性ごとに返答が集まる</h3>
-      <p class="how-desc">「既婚（子なし）・フリーランス・転職経験あり」の人が答えてくれる。誰が言っているかわかるから、重みが違う。</p>
+      <p class="how-desc">「30歳・会社員・既婚（子なし）」の人が答えてくれる。誰が言っているかわかるから、重みが違う。</p>
     </div>
   </div>
 </section>
@@ -940,7 +981,7 @@
   <div class="feature-text">
     <div class="section-label">安心して話せる設計</div>
     <h2 class="section-title">女性限定だから、<br>本音が出てくる。</h2>
-    <p class="section-body">Xだと見知らぬ人の反発が怖い。知恵袋は誰が答えているかわからない。ここは女性だけの、少し狭くて安全な場所。</p>
+    <p class="section-body">SNSだと見知らぬ人の反発が怖い。掲示板は誰が答えているかわからない。ここは女性だけの、少し狭くて安全な場所。</p>
 
     <ul class="feature-points">
       <li>参加は女性のみ（自己申告制）</li>
@@ -949,6 +990,17 @@
       <li>過去の投稿・履歴でその人の変化も見える</li>
       <li>反発・炎上しにくいクローズドな空間</li>
     </ul>
+
+    <div class="reaction-showcase">
+      <p class="reaction-label">「いいね」だけじゃない、共感のかたち</p>
+      <div class="reaction-pills">
+        <span class="rpill">🤝 わかる</span>
+        <span class="rpill">💡 参考になった</span>
+        <span class="rpill">📣 応援してる</span>
+        <span class="rpill active">🤍 つらいね</span>
+      </div>
+      <p class="reaction-note">気持ちに合ったリアクションで、言葉にならない共感も伝えられる。</p>
+    </div>
   </div>
 
 </section>
@@ -968,10 +1020,10 @@
         <li>全スレッドの閲覧</li>
         <li>属性タグで検索・絞り込み</li>
         <li>プロフィール属性タグの設定</li>
-        <li>スレッドへのリアクション</li>
+        <li>スレッドへの共感リアクション（わかる・参考になった・応援してる・つらいね）</li>
         <li>投稿・返信はできません</li>
       </ul>
-      <a href="#signup" class="price-btn">無料で始める</a>
+      <a href="https://app.honneroom.com" class="price-btn">無料で始める</a>
     </div>
 
     <div class="price-card featured">
@@ -984,7 +1036,7 @@
         <li>投稿・返信し放題</li>
         <li>14日間無料トライアル付き</li>
       </ul>
-      <a href="#signup" class="price-btn">14日間無料で試す</a>
+      <a href="https://app.honneroom.com" class="price-btn">14日間無料で試す</a>
     </div>
   </div>
 </section>
@@ -993,7 +1045,7 @@
 <section class="cta-section" id="signup">
   <h2 class="section-title">一人で抱えなくていい。<br>似た誰かが、ここにいる。</h2>
   <p class="section-body">登録は1分。匿名OK、女性限定の静かな場所で、本音を話してみてください。</p>
-  <a href="/register" class="btn-primary">無料で参加する →</a>
+  <a href="https://app.honneroom.com" class="btn-primary">無料で参加する →</a>
   <p class="cta-note">✓ 女性限定　✓ 匿名OK　✓ クレジットカード不要（無料プラン）</p>
 </section>
 
