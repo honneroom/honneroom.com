@@ -500,8 +500,14 @@
   .how-desc { font-size: 14px; line-height: 1.85; color: #7a6860; font-weight: 300; }
 
   /* FEATURE */
-  .feature { background: var(--warm); padding: 120px 80px; }
-  .feature-text { max-width: 640px; }
+  .feature { background: var(--warm); padding: 120px 80px; text-align: center; }
+  .feature-text { max-width: 640px; margin: 0 auto; }
+  .feature .section-label { justify-content: center; }
+  .feature .section-label::after { display: none; }
+  .feature .section-label::before { content: ''; display: block; width: 40px; height: 1px; background: var(--terra); opacity: 0.5; }
+  .feature .section-body { margin: 0 auto; }
+  .feature .feature-points { text-align: left; }
+  .feature .reaction-showcase { margin: 48px auto 0; text-align: left; }
 
   .reaction-showcase {
     margin-top: 48px;
@@ -797,7 +803,7 @@
     <div class="section-label">安心して話せる設計</div>
     <h2 class="section-title">女性限定だから、<br>本音が出てくる。</h2>
     <!-- ▼ 修正④：「。」で改行 -->
-    <p class="section-body">SNSだと見知らぬ人の反発が怖い。<br>掲示板は誰が答えているかわからない。<br>ここは女性だけの、少し狭くて安全な場所。</p>
+    <p class="section-body">SNSだと見知らぬ人の反発が怖い。掲示板は誰が答えているかわからない。<br>ここは女性だけの、少し狭くて安全な場所。</p>
     <ul class="feature-points">
       <li>参加は女性のみ（自己申告制）</li>
       <li>実名不要・顔出し不要</li>
