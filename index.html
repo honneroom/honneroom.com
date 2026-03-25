@@ -564,7 +564,6 @@
     font-weight: 300;
   }
 
-
   .feature-points {
     list-style: none;
     margin-top: 40px;
@@ -686,7 +685,7 @@
     line-height: 1.6;
     color: #6a5550;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     font-weight: 300;
   }
@@ -698,9 +697,40 @@
     color: var(--terra);
     font-size: 12px;
     flex-shrink: 0;
+    margin-top: 2px;
   }
 
   .price-card.featured .price-features li::before { color: var(--terra-pale); }
+
+  /* 制限・広告バッジ */
+  .price-limit-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    padding: 2px 7px;
+    background: var(--sand-pale);
+    color: var(--mist);
+    border-radius: 2px;
+    margin-left: 4px;
+    vertical-align: middle;
+    font-weight: 400;
+  }
+
+  .price-ad-note {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(42,31,26,0.04);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--mist);
+    line-height: 1.7;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  .price-ad-note::before {
+    content: '📢 ';
+  }
 
   .price-btn {
     display: block;
@@ -1009,16 +1039,16 @@
       <p class="reaction-note">気持ちに合ったリアクションで、言葉にならない共感も伝えられる。</p>
     </div>
   </div>
-
 </section>
 
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="section-label">料金プラン</div>
   <h2 class="section-title">まずは無料で。</h2>
-  <p class="section-body">読むだけなら、ずっと無料。投稿して参加したくなったら、有料プランへ。</p>
+  <p class="section-body">無料でも投稿できる。もっと話したくなったら、有料プランへ。</p>
 
   <div class="price-cards">
+    <!-- Free -->
     <div class="price-card">
       <div class="price-tier">Free</div>
       <div class="price-amount">¥0</div>
@@ -1027,12 +1057,19 @@
         <li>全スレッドの閲覧</li>
         <li>属性タグで検索・絞り込み</li>
         <li>プロフィール属性タグの設定</li>
-        <li>スレッドへの共感リアクション（わかる・参考になった・応援してる・つらいね）</li>
-        <li>投稿・返信はできません</li>
+        <li>スレッドへの共感リアクション</li>
+        <li>
+          新規投稿
+          <span class="price-limit-badge">1日3件まで</span>
+        </li>
+        <li>返信・コメントし放題</li>
+        <li>広告が表示されます</li>
       </ul>
-      <a href="https://app.honneroom.com" class="price-btn">無料で始める</a>
+      <div class="price-ad-note">広告非表示・投稿無制限にしたい方はStandardプランへ</div>
+      <a href="https://app.honneroom.com" class="price-btn" style="margin-top:20px">無料で始める</a>
     </div>
 
+    <!-- Standard -->
     <div class="price-card featured">
       <div class="price-badge">おすすめ</div>
       <div class="price-tier">Standard</div>
@@ -1040,7 +1077,8 @@
       <div class="price-period">/ 月、いつでも解約可能</div>
       <ul class="price-features">
         <li>すべての無料機能</li>
-        <li>投稿・返信し放題</li>
+        <li>新規投稿・返信し放題</li>
+        <li>広告なし</li>
         <li>14日間無料トライアル付き</li>
       </ul>
       <a href="https://app.honneroom.com" class="price-btn">14日間無料で試す</a>
