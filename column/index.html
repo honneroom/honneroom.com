@@ -48,7 +48,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,246,240,0.95);backdrop
 .article-title{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:600;line-height:1.55;color:var(--ink)}
 .article-meta{font-size:12px;color:var(--mist);margin-top:auto;display:flex;align-items:center;gap:8px}
 .article-meta::before{content:'';display:block;width:16px;height:1px;background:var(--mist)}
-.grid-empty{padding:48px 32px;color:var(--mist);font-size:14px;background:var(--cream)}
+/* フィルターで非表示 */
+.article-card.hidden{display:none}
+.grid-empty{padding:48px 32px;color:var(--mist);font-size:14px;background:var(--cream);display:none}
+.grid-empty.show{display:block}
 .cta-banner{background:var(--ink);color:var(--cream);padding:64px 40px;text-align:center;margin-top:64px}
 .cta-banner p{font-family:'Shippori Mincho',serif;font-size:clamp(18px,2.5vw,26px);margin-bottom:8px;line-height:1.5}
 .cta-banner small{font-size:14px;color:rgba(250,246,240,0.5);display:block;margin-bottom:32px}
@@ -87,12 +90,144 @@ footer{background:var(--ink);color:rgba(250,246,240,0.4);padding:48px 40px;text-
 
 <div class="filter-bar fade-in" id="filterBar">
   <button class="filter-btn active" data-cat="all">すべて</button>
-  <!-- カテゴリボタンはJSで動的生成 -->
+  <button class="filter-btn" data-cat="婚活">婚活</button>
+  <button class="filter-btn" data-cat="キャリア">キャリア</button>
+  <button class="filter-btn" data-cat="お金">お金</button>
+  <button class="filter-btn" data-cat="人間関係">人間関係</button>
+  <button class="filter-btn" data-cat="メンタル">メンタル</button>
+  <button class="filter-btn" data-cat="恋愛">恋愛</button>
+  <button class="filter-btn" data-cat="将来">将来</button>
 </div>
 
 <div class="articles">
+  <!-- ★ 記事リンクをHTML内に直接記述（Googleクローラー対応） -->
   <div class="articles-grid" id="grid">
-    <!-- 記事カードはJSで動的生成 -->
+    <a href="/column/article-01.html" class="article-card fade-in" data-cat="婚活">
+      <span class="article-tag">婚活</span>
+      <p class="article-title">婚活疲れた、もうやめたい…そう感じた時に読む話</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-02.html" class="article-card fade-in" data-cat="婚活">
+      <span class="article-tag">婚活</span>
+      <p class="article-title">婚活2年目の私がたどり着いた「条件より大事なこと」</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-03.html" class="article-card fade-in" data-cat="婚活">
+      <span class="article-tag">婚活</span>
+      <p class="article-title">婚活アプリで疲弊する女性が増えている理由</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-04.html" class="article-card fade-in" data-cat="キャリア">
+      <span class="article-tag">キャリア</span>
+      <p class="article-title">フリーランス女性の老後不安、iDeCo・NISA以外の選択肢</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-05.html" class="article-card fade-in" data-cat="キャリア">
+      <span class="article-tag">キャリア</span>
+      <p class="article-title">会社員 vs フリーランス、20代女性はどちらが幸せ？</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-06.html" class="article-card fade-in" data-cat="キャリア">
+      <span class="article-tag">キャリア</span>
+      <p class="article-title">産休・育休中に稼ぐ方法、実際どんな選択肢がある？</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-07.html" class="article-card fade-in" data-cat="お金">
+      <span class="article-tag">お金</span>
+      <p class="article-title">27歳女性の貯金額、正直みんないくらくらい持ってる？</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-08.html" class="article-card fade-in" data-cat="お金">
+      <span class="article-tag">お金</span>
+      <p class="article-title">一人暮らし女性の節約、無理せず続けられる方法</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-09.html" class="article-card fade-in" data-cat="人間関係">
+      <span class="article-tag">人間関係</span>
+      <p class="article-title">職場で本音が言えない女性が増えている本当の理由</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-10.html" class="article-card fade-in" data-cat="人間関係">
+      <span class="article-tag">人間関係</span>
+      <p class="article-title">友達に相談できない…そんな時どこに吐き出せばいい？</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-11.html" class="article-card fade-in" data-cat="メンタル">
+      <span class="article-tag">メンタル</span>
+      <p class="article-title">一人で全部抱えてしまう女性に足りないもの</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-12.html" class="article-card fade-in" data-cat="メンタル">
+      <span class="article-tag">メンタル</span>
+      <p class="article-title">「もっと頑張らなきゃ」が口癖の人が疲れる理由</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-13.html" class="article-card fade-in" data-cat="恋愛">
+      <span class="article-tag">恋愛</span>
+      <p class="article-title">好きな人ができない…30代で感じる恋愛への疲れ</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-14.html" class="article-card fade-in" data-cat="将来">
+      <span class="article-tag">将来</span>
+      <p class="article-title">30代で感じる焦り、同世代女性はどう乗り越えてる？</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-15.html" class="article-card fade-in" data-cat="将来">
+      <span class="article-tag">将来</span>
+      <p class="article-title">結婚しない選択、独身女性がこれからを生きるヒント</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-16.html" class="article-card fade-in" data-cat="恋愛">
+      <span class="article-tag">恋愛</span>
+      <p class="article-title">元彼を忘れられない…前に進めない時の気持ちの整理の仕方</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-17.html" class="article-card fade-in" data-cat="メンタル">
+      <span class="article-tag">メンタル</span>
+      <p class="article-title">「比べてしまう自分」が嫌になった時に読む話</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-18.html" class="article-card fade-in" data-cat="お金">
+      <span class="article-tag">お金</span>
+      <p class="article-title">奨学金返済中の女性、みんなどうやりくりしてる？</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-19.html" class="article-card fade-in" data-cat="将来">
+      <span class="article-tag">将来</span>
+      <p class="article-title">「このままでいいのかな」と夜に考えてしまう人へ</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-20.html" class="article-card fade-in" data-cat="人間関係">
+      <span class="article-tag">人間関係</span>
+      <p class="article-title">気を遣いすぎて疲れる…自分を守るための距離の取り方</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-21.html" class="article-card fade-in" data-cat="婚活">
+      <span class="article-tag">婚活</span>
+      <p class="article-title">結婚相談所とマッチングアプリ、どちらが自分に向いてる？</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-22.html" class="article-card fade-in" data-cat="キャリア">
+      <span class="article-tag">キャリア</span>
+      <p class="article-title">転職したいけど怖い…踏み出せない女性が知っておくこと</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-23.html" class="article-card fade-in" data-cat="恋愛">
+      <span class="article-tag">恋愛</span>
+      <p class="article-title">年下男性との恋愛、うまくいくカップルと続かないカップルの違い</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-24.html" class="article-card fade-in" data-cat="メンタル">
+      <span class="article-tag">メンタル</span>
+      <p class="article-title">眠れない夜が続く時、心と体に何が起きているか</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <a href="/column/article-25.html" class="article-card fade-in" data-cat="将来">
+      <span class="article-tag">将来</span>
+      <p class="article-title">一人暮らしを続けるか実家に戻るか、迷った時の考え方</p>
+      <span class="article-meta">2026.03</span>
+    </a>
+    <p class="grid-empty" id="emptyMsg">該当する記事はありません。</p>
   </div>
 </div>
 
@@ -117,88 +252,33 @@ footer{background:var(--ink);color:rgba(250,246,240,0.4);padding:48px 40px;text-
 </footer>
 
 <script>
-// ============================================================
-// 【記事の追加方法】
-// articles.json に以下の形式で追記するだけでOKです。
-// index.html の編集は一切不要です。
-//
-// {
-//   "id": "article-16",        ← HTMLファイル名（.htmlを除く）
-//   "title": "記事タイトル",
-//   "category": "カテゴリ名",  ← 既存カテゴリ or 新カテゴリ（自動でボタン追加）
-//   "date": "2026.04"
-// }
-// ============================================================
-
-let allArticles = [];
-
-fetch('/column/articles.json')
-  .then(res => res.json())
-  .then(data => {
-    allArticles = data;
-    buildCategories(data);
-    renderCards(data);
-    initFadeIn();
-  })
-  .catch(err => console.error('articles.json の読み込みに失敗:', err));
-
-// カテゴリボタンを動的生成（重複なし・記事の登場順）
-function buildCategories(articles) {
-  const cats = [...new Set(articles.map(a => a.category))];
-  const bar = document.getElementById('filterBar');
-  cats.forEach(cat => {
-    const btn = document.createElement('button');
-    btn.className = 'filter-btn';
-    btn.dataset.cat = cat;
-    btn.textContent = cat;
-    bar.appendChild(btn);
+// カテゴリフィルター（表示/非表示切り替え）
+document.getElementById('filterBar').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cat = btn.dataset.cat;
+  const cards = document.querySelectorAll('.article-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const show = cat === 'all' || card.dataset.cat === cat;
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
   });
+  document.getElementById('emptyMsg').classList.toggle('show', visible === 0);
+});
 
-  bar.addEventListener('click', e => {
-    const btn = e.target.closest('.filter-btn');
-    if (!btn) return;
-    bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const cat = btn.dataset.cat;
-    renderCards(cat === 'all' ? allArticles : allArticles.filter(a => a.category === cat));
+// fade-in
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      obs.unobserve(entry.target);
+    }
   });
-}
-
-// 記事カードをグリッドに描画
-function renderCards(articles) {
-  const grid = document.getElementById('grid');
-  grid.innerHTML = '';
-  if (articles.length === 0) {
-    grid.innerHTML = '<p class="grid-empty">該当する記事はありません。</p>';
-    return;
-  }
-  articles.forEach(article => {
-    const a = document.createElement('a');
-    a.href = `/column/${article.id}.html`;
-    a.className = 'article-card fade-in';
-    a.dataset.cat = article.category;
-    a.innerHTML = `
-      <span class="article-tag">${article.category}</span>
-      <p class="article-title">${article.title}</p>
-      <span class="article-meta">${article.date}</span>
-    `;
-    grid.appendChild(a);
-  });
-  requestAnimationFrame(initFadeIn);
-}
-
-// Intersection Observer でfade-in
-function initFadeIn() {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 60);
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.05 });
-  document.querySelectorAll('.fade-in:not(.visible)').forEach(el => obs.observe(el));
-}
+}, { threshold: 0.05 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
