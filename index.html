@@ -146,13 +146,23 @@
     background: var(--terra);
   }
 
+  /* ▼ 修正①：PC/タブレット/スマホで綺麗に1行に収まるよう調整 */
   .hero-title {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(28px, 2.8vw, 40px);
+    font-size: clamp(22px, 2.4vw, 36px);
     font-weight: 600;
     line-height: 1.65;
     color: var(--ink);
     margin-bottom: 28px;
+    white-space: nowrap; /* PCでは強制的に1行 */
+  }
+
+  /* スマホでは white-space を解除してフォントサイズで1行に収める */
+  @media (max-width: 900px) {
+    .hero-title {
+      font-size: clamp(20px, 7vw, 30px);
+      white-space: normal;
+    }
   }
 
   .hero-title em {
@@ -703,6 +713,7 @@
 <section class="hero">
   <div class="hero-left">
     <div class="hero-tag">女性のための、本音の場所</div>
+    <!-- ▼ 修正①：1行に収まるよう文字間にnbspを使わず、CSS側で制御 -->
     <h1 class="hero-title">本音を、<em>安心して</em>話せる場所。</h1>
     <p class="hero-sub">仕事のこと、結婚のこと、お金のこと。<br>正解のない問いに向き合う女性たちが、<br>似た境遇の誰かとリアルにつながれる場所。</p>
     <div class="hero-actions">
@@ -746,7 +757,8 @@
   <div>
     <div class="section-label">こんな悩み、ありませんか</div>
     <h2 class="section-title">正解のない問いを、<br>一人で検索し続けていませんか？</h2>
-    <p class="section-body">掲示板やSNSでは、似たような境遇の人の「その後」はわからない。誰が答えているのかもわからない。だから結局、決断できないまま時間が過ぎていく。</p>
+    <!-- ▼ 修正②：「。」で改行 -->
+    <p class="section-body">掲示板やSNSでは、似たような境遇の人の「その後」はわからない。<br>誰が答えているのかもわからない。<br>だから結局、決断できないまま時間が過ぎていく。</p>
   </div>
   <div class="pain-list">
     <div class="pain-item"><span class="pain-num">01</span><div><p class="pain-text">仕事、このままでいいのかわからない</p><p class="pain-sub">転職・副業・独立…選択肢が多すぎて、似た経験をした人の話が聞きたい</p></div></div>
@@ -759,9 +771,24 @@
   <div class="section-label">使い方</div>
   <h2 class="section-title">属性が見えるから、<br>刺さる言葉に出会える。</h2>
   <div class="how-grid">
-    <div class="how-item"><div class="how-step">01</div><h3 class="how-title">プロフィールを設定する</h3><p class="how-desc">年齢・働き方など、任意の属性を登録。匿名のまま、自分の輪郭だけを見せる。</p></div>
-    <div class="how-item"><div class="how-step">02</div><h3 class="how-title">悩みを投稿する、または探す</h3><p class="how-desc">「キャリア」「結婚・ライフプラン」「お金」などのカテゴリで投稿・検索。似た境遇のスレッドを見つけて読む。</p></div>
-    <div class="how-item"><div class="how-step">03</div><h3 class="how-title">属性ごとに返答が集まる</h3><p class="how-desc">「30歳・会社員・既婚（子なし）」の人が答えてくれる。誰が言っているかわかるから、重みが違う。</p></div>
+    <div class="how-item">
+      <div class="how-step">01</div>
+      <h3 class="how-title">プロフィールを設定する</h3>
+      <!-- 01は1文なので改行不要 -->
+      <p class="how-desc">年齢・働き方など、任意の属性を登録。<br>匿名のまま、自分の輪郭だけを見せる。</p>
+    </div>
+    <div class="how-item">
+      <div class="how-step">02</div>
+      <h3 class="how-title">悩みを投稿する、または探す</h3>
+      <!-- ▼ 修正③：「。」で改行 -->
+      <p class="how-desc">「キャリア」「結婚・ライフプラン」「お金」などのカテゴリで投稿・検索。<br>似た境遇のスレッドを見つけて読む。</p>
+    </div>
+    <div class="how-item">
+      <div class="how-step">03</div>
+      <h3 class="how-title">属性ごとに返答が集まる</h3>
+      <!-- ▼ 修正③：「。」で改行 -->
+      <p class="how-desc">「30歳・会社員・既婚（子なし）」の人が答えてくれる。<br>誰が言っているかわかるから、重みが違う。</p>
+    </div>
   </div>
 </section>
 
@@ -769,7 +796,8 @@
   <div class="feature-text">
     <div class="section-label">安心して話せる設計</div>
     <h2 class="section-title">女性限定だから、<br>本音が出てくる。</h2>
-    <p class="section-body">SNSだと見知らぬ人の反発が怖い。掲示板は誰が答えているかわからない。ここは女性だけの、少し狭くて安全な場所。</p>
+    <!-- ▼ 修正④：「。」で改行 -->
+    <p class="section-body">SNSだと見知らぬ人の反発が怖い。<br>掲示板は誰が答えているかわからない。<br>ここは女性だけの、少し狭くて安全な場所。</p>
     <ul class="feature-points">
       <li>参加は女性のみ（自己申告制）</li>
       <li>実名不要・顔出し不要</li>
