@@ -7,31 +7,32 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-N8N26KRS9P');
+  gtag('config', 'G-N8N26KRS9P', { linker: { domains: ['honneroom.com','app.honneroom.com'] } });
 </script>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6815100822303700"
      crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>本音ルーム｜本音を、安心して話せる場所。</title>
+<title>本音ルーム｜気持ちを書いて、AIに分析してもらう</title>
+<meta name="description" content="今の気持ちを書くだけで、AIが感情を分析・可視化します。感情スタイル診断、核心感情の抽出、思考のクセの可視化。無料で今すぐ使えます。">
 <link rel="icon" type="image/png" href="https://honneroom.com/assets/icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --ink: #2a1f1a;
-    --cream: #faf6f0;
-    --warm: #f2ebe0;
-    --terra: #b85c38;
-    --terra-light: #d4795a;
-    --terra-pale: #f5ddd5;
+    --ink: #1a1714;
+    --cream: #f5f0e8;
+    --warm: #e8dfd0;
+    --terra: #c4622d;
+    --terra-light: #d4845a;
+    --terra-pale: #f0ddd3;
     --rose: #c47060;
     --rose-pale: #f7e8e4;
     --sand: #c8a882;
     --sand-pale: #f0e6d8;
-    --mist: #9a8880;
-    --linen: #e8dfd4;
+    --mist: #8a7a72;
+    --linen: #e0d8cc;
   }
 
   html { scroll-behavior: smooth; }
@@ -62,9 +63,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(250, 246, 240, 0.88);
+    background: rgba(245,240,232,0.92);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(42,31,26,0.07);
+    border-bottom: 1px solid rgba(26,23,20,0.07);
   }
 
   .nav-logo {
@@ -76,18 +77,6 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-  }
-
-  .nav-logo-mark {
-    width: 28px; height: 28px;
-    background: var(--terra);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: white;
-    flex-shrink: 0;
   }
 
   .nav-cta {
@@ -105,7 +94,7 @@
     border-radius: 2px;
   }
 
-  .nav-cta:hover { background: var(--terra-light); }
+  .nav-cta:hover { background: var(--ink); }
 
   /* HERO */
   .hero {
@@ -146,22 +135,18 @@
     background: var(--terra);
   }
 
-  /* ▼ 修正①：PC/タブレット/スマホで綺麗に1行に収まるよう調整 */
   .hero-title {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(22px, 2.4vw, 36px);
+    font-size: clamp(28px, 3vw, 44px);
     font-weight: 600;
-    line-height: 1.65;
+    line-height: 1.55;
     color: var(--ink);
     margin-bottom: 28px;
-    white-space: nowrap; /* PCでは強制的に1行 */
   }
 
-  /* スマホでは white-space を解除してフォントサイズで1行に収める */
   @media (max-width: 900px) {
     .hero-title {
-      font-size: clamp(20px, 7vw, 30px);
-      white-space: normal;
+      font-size: clamp(24px, 7vw, 34px);
     }
   }
 
@@ -218,20 +203,6 @@
     transform: translateY(-1px);
   }
 
-  .btn-ghost {
-    color: var(--ink);
-    font-size: 14px;
-    font-weight: 300;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: gap 0.2s;
-    letter-spacing: 0.02em;
-  }
-
-  .btn-ghost:hover { gap: 14px; }
-
   .hero-note {
     margin-top: 24px;
     font-size: 12px;
@@ -277,73 +248,63 @@
     padding: 40px;
   }
 
-  .thread-card {
+  .result-card-demo {
     background: white;
     padding: 20px 24px;
     width: 320px;
-    box-shadow: 0 2px 24px rgba(42,31,26,0.07);
+    box-shadow: 0 2px 24px rgba(26,23,20,0.07);
     animation: floatUp 0.6s ease forwards;
     opacity: 0;
     border-radius: 4px;
   }
 
-  .thread-card:nth-child(1) { animation-delay: 0.3s; transform: rotate(-1deg); }
-  .thread-card:nth-child(2) { animation-delay: 0.5s; transform: rotate(0.5deg); }
-  .thread-card:nth-child(3) { animation-delay: 0.7s; transform: rotate(-0.5deg); }
+  .result-card-demo:nth-child(1) { animation-delay: 0.3s; transform: rotate(-1deg); }
+  .result-card-demo:nth-child(2) { animation-delay: 0.5s; transform: rotate(0.5deg); }
+  .result-card-demo:nth-child(3) { animation-delay: 0.7s; transform: rotate(-0.5deg); }
 
   @keyframes floatUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .thread-meta {
+  .card-label-sm {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 10px;
   }
 
-  .thread-avatar {
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
-    flex-shrink: 0;
+  .card-label-sm::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--terra);
+    opacity: 0.2;
   }
 
-  .thread-attr {
-    font-size: 11px;
-    color: var(--mist);
-    line-height: 1.4;
-  }
-
-  .thread-attr strong {
-    color: var(--ink);
-    font-weight: 400;
-    display: block;
-    font-size: 12px;
-  }
-
-  .thread-body {
+  .card-input-text {
     font-size: 13px;
     line-height: 1.75;
     color: #3d2e28;
     font-family: 'Shippori Mincho', serif;
+    font-weight: 400;
   }
 
-  .thread-tag {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    padding: 3px 8px;
-    background: var(--terra-pale);
-    color: var(--terra);
-    border-radius: 2px;
+  .emotion-chip-sm {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    margin-right: 5px;
+    margin-top: 4px;
   }
 
   .scroll-line {
@@ -427,13 +388,13 @@
   .pain .section-label { color: var(--terra-light); }
   .pain .section-label::after { background: var(--terra-light); }
   .pain .section-title { color: var(--cream); }
-  .pain .section-body { color: rgba(250,246,240,0.6); }
+  .pain .section-body { color: rgba(245,240,232,0.6); }
 
   .pain-list { display: flex; flex-direction: column; gap: 0; }
 
   .pain-item {
     padding: 28px 0;
-    border-bottom: 1px solid rgba(250,246,240,0.1);
+    border-bottom: 1px solid rgba(245,240,232,0.1);
     display: grid;
     grid-template-columns: 48px 1fr;
     gap: 20px;
@@ -459,7 +420,7 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
     font-weight: 300;
-    color: rgba(250,246,240,0.5);
+    color: rgba(245,240,232,0.5);
     margin-top: 6px;
     line-height: 1.7;
   }
@@ -472,7 +433,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
     margin-top: 64px;
-    background: rgba(42,31,26,0.08);
+    background: rgba(26,23,20,0.08);
   }
 
   .how-item { background: var(--cream); padding: 48px 40px; transition: background 0.3s; }
@@ -507,18 +468,20 @@
   .feature .section-label::before { content: ''; display: block; width: 40px; height: 1px; background: var(--terra); opacity: 0.5; }
   .feature .section-body { margin: 0 auto; }
   .feature .feature-points { text-align: left; }
-  .feature .reaction-showcase { margin: 48px auto 0; text-align: left; }
 
-  .reaction-showcase {
+  .type-showcase {
     margin-top: 48px;
     padding: 28px 32px;
     background: white;
     border-radius: 6px;
-    box-shadow: 0 2px 16px rgba(42,31,26,0.06);
+    box-shadow: 0 2px 16px rgba(26,23,20,0.06);
     max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
 
-  .reaction-label {
+  .type-showcase-label {
     font-family: 'Shippori Mincho', serif;
     font-size: 13px;
     color: var(--mist);
@@ -526,27 +489,24 @@
     margin-bottom: 16px;
   }
 
-  .reaction-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-
-  .rpill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    font-size: 13px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    background: var(--cream);
-    color: var(--ink);
-    border: 1px solid rgba(42,31,26,0.1);
-    border-radius: 20px;
-    letter-spacing: 0.02em;
-    transition: all 0.2s;
-    cursor: default;
+  .type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
-  .rpill.active { background: var(--terra-pale); border-color: var(--terra); color: var(--terra); }
-  .reaction-note { font-size: 12px; color: var(--mist); line-height: 1.7; font-weight: 300; }
+  .type-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--ink);
+    padding: 8px 12px;
+    background: var(--cream);
+    border-radius: 4px;
+    letter-spacing: 0.01em;
+  }
 
   .feature-points { list-style: none; margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
 
@@ -576,7 +536,6 @@
     gap: 2px;
     max-width: 800px;
     margin: 0 auto;
-    background: transparent;
     align-items: start;
   }
 
@@ -586,7 +545,7 @@
     text-align: left;
     position: relative;
     transition: background 0.3s;
-    border: 1px solid rgba(42,31,26,0.08);
+    border: 1px solid rgba(26,23,20,0.08);
   }
 
   .price-card.featured { background: var(--terra); color: white; }
@@ -633,20 +592,6 @@
     font-weight: 400;
   }
 
-  .price-ad-note {
-    margin-top: 16px;
-    padding: 12px 16px;
-    background: rgba(42,31,26,0.04);
-    border-radius: 4px;
-    font-size: 12px;
-    color: var(--mist);
-    line-height: 1.7;
-    font-weight: 300;
-    text-align: left;
-  }
-
-  .price-ad-note::before { content: '📢 '; }
-
   .price-btn {
     display: block;
     text-align: center;
@@ -669,17 +614,16 @@
 
   /* CTA */
   .cta-section { background: var(--warm); text-align: center; padding: 140px 80px; position: relative; overflow: hidden; }
-  .cta-section::before { content: '💬'; position: absolute; font-size: 320px; opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+  .cta-section::before { content: '✦'; position: absolute; font-size: 320px; opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
   .cta-section .section-title { font-size: clamp(32px, 4vw, 52px); margin-bottom: 20px; }
   .cta-section .section-body { margin: 0 auto 48px; text-align: center; }
   .cta-note { font-size: 12px; color: var(--mist); margin-top: 20px; letter-spacing: 0.04em; }
 
   /* FOOTER */
-  footer { background: var(--ink); color: rgba(250,246,240,0.5); padding: 48px 80px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+  footer { background: var(--ink); color: rgba(245,240,232,0.5); padding: 48px 80px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
   .footer-logo { font-family: 'Shippori Mincho', serif; font-size: 16px; color: var(--cream); display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .footer-logo-mark { width: 22px; height: 22px; background: var(--terra); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: white; }
   .footer-links { display: flex; gap: 32px; flex-wrap: wrap; }
-  .footer-links a { color: rgba(250,246,240,0.4); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-links a { color: rgba(245,240,232,0.4); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; transition: color 0.2s; }
   .footer-links a:hover { color: var(--cream); }
   .footer-copy { font-size: 11px; letter-spacing: 0.04em; width: 100%; }
 
@@ -694,11 +638,9 @@
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 60px 24px 48px; }
     .hero-right { min-height: 400px; }
-    .thread-card { width: 280px; }
+    .result-card-demo { width: 280px; }
     .pain { grid-template-columns: 1fr; gap: 40px; padding: 80px 24px; }
     .how-grid { grid-template-columns: 1fr; }
-    .feature { grid-template-columns: 1fr; }
-    .feature-text { padding: 80px 24px; }
     .price-cards { grid-template-columns: 1fr; max-width: 400px; }
     .cta-section { padding: 100px 24px; }
     footer { padding: 40px 24px; }
@@ -713,46 +655,42 @@
     <img src="https://honneroom.com/assets/icon.png" alt="本音ルーム" style="width:28px;height:28px;object-fit:contain;">
     本音ルーム
   </a>
-  <a href="https://app.honneroom.com" class="nav-cta">無料で始める</a>
+  <a href="https://app.honneroom.com" class="nav-cta">今すぐ書いてみる</a>
 </nav>
 
 <section class="hero">
   <div class="hero-left">
-    <div class="hero-tag">女性のための、本音の場所</div>
-    <!-- ▼ 修正①：1行に収まるよう文字間にnbspを使わず、CSS側で制御 -->
-    <h1 class="hero-title">本音を、<em>安心して</em>話せる場所。</h1>
-    <p class="hero-sub">仕事のこと、結婚のこと、お金のこと。<br>正解のない問いに向き合う女性たちが、<br>似た境遇の誰かとリアルにつながれる場所。</p>
+    <div class="hero-tag">AI感情分析ツール</div>
+    <h1 class="hero-title">気持ちを、<em>整理</em>してみよう。</h1>
+    <p class="hero-sub">もやもやする、言葉にならない、また同じことで悩んでいる。<br>今の気持ちを書くだけで、AIが感情を分析・可視化します。</p>
     <div class="hero-actions">
-      <a href="https://app.honneroom.com" class="btn-primary">無料で参加する</a>
-      <a href="https://app.honneroom.com/preview.html" class="btn-ghost">登録前にのぞいてみる →</a>
+      <a href="https://app.honneroom.com" class="btn-primary">今すぐ書いてみる（無料）</a>
     </div>
-    <p class="hero-note">✓ 女性限定　✓ 匿名OK　✓ 属性が見えるから安心</p>
+    <p class="hero-note">✓ 登録なしでも利用可　✓ 無料でAI分析　✓ 記録が残る（登録後）</p>
   </div>
   <div class="hero-right">
     <div class="hero-card-stack">
-      <div class="thread-card">
-        <div class="thread-meta">
-          <div class="thread-avatar" style="background:#b85c38;">M</div>
-          <div class="thread-attr"><strong>みかん / 28歳</strong>会社員・婚活中・一人暮らし</div>
+      <div class="result-card-demo">
+        <div class="card-label-sm">今の気持ち</div>
+        <p class="card-input-text">今日、上司に頑張りを全然認めてもらえなかった。努力しても見えていないのかと思うと、悔しいやら悲しいやら…</p>
+        <div style="margin-top:12px;font-size:12px;color:var(--terra);display:flex;align-items:center;gap:6px;">
+          <span style="display:inline-block;animation:spin .8s linear infinite">↻</span> 分析中…
         </div>
-        <p class="thread-body">今の仕事を続けるか、転職するか…彼氏との将来も考えると何が正解かわからなくて。</p>
-        <span class="thread-tag"># キャリア</span>
       </div>
-      <div class="thread-card">
-        <div class="thread-meta">
-          <div class="thread-avatar" style="background:#c47060;">S</div>
-          <div class="thread-attr"><strong>さくら / 31歳</strong>会社員・既婚（子なし）・パートナーと同居</div>
-        </div>
-        <p class="thread-body">同じ状況でした。私は結果的に副業から始めて…属性が同じ人の話が一番参考になった。</p>
-        <span class="thread-tag"># 結婚・ライフプラン</span>
+      <div class="result-card-demo" style="background:linear-gradient(135deg,#bf360c,#e64a19);overflow:hidden;">
+        <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px;">今の感情スタイル</div>
+        <div style="font-size:36px;line-height:1;margin-bottom:8px;">🔥</div>
+        <div style="font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;color:white;margin-bottom:5px;">たき火タイプ</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.75);line-height:1.6;">感情を言葉と行動に変えて燃やす人</div>
       </div>
-      <div class="thread-card">
-        <div class="thread-meta">
-          <div class="thread-avatar" style="background:#a0756a;">A</div>
-          <div class="thread-attr"><strong>あおい / 29歳</strong>会社員・婚活中・実家暮らし</div>
+      <div class="result-card-demo">
+        <div class="card-label-sm">感情の内訳（プルチック）</div>
+        <div>
+          <span class="emotion-chip-sm" style="background:#e53935;">怒り <span style="font-size:10px;color:rgba(255,255,255,.8)">●●●●○</span></span>
+          <span class="emotion-chip-sm" style="background:#3f51b5;">悲しみ <span style="font-size:10px;color:rgba(255,255,255,.8)">●●●○○</span></span>
+          <span class="emotion-chip-sm" style="background:#f57c00;">期待 <span style="font-size:10px;color:rgba(255,255,255,.8)">●●○○○</span></span>
         </div>
-        <p class="thread-body">婚活2年目。条件が合う人ほど話が続かなくて…仕事を優先してきたことを後悔してる自分もいる。</p>
-        <span class="thread-tag"># 恋愛</span>
+        <div style="margin-top:12px;font-size:12px;color:var(--mist);background:var(--cream);padding:8px 12px;border-left:2px solid var(--terra);">「認められたいという気持ちが裏切られた悔しさ」</div>
       </div>
     </div>
   </div>
@@ -762,64 +700,62 @@
 <section class="pain">
   <div>
     <div class="section-label">こんな悩み、ありませんか</div>
-    <h2 class="section-title">正解のない問いを、<br>一人で検索し続けていませんか？</h2>
-    <!-- ▼ 修正②：「。」で改行 -->
-    <p class="section-body">掲示板やSNSでは、似たような境遇の人の「その後」はわからない。<br>誰が答えているのかもわからない。<br>だから結局、決断できないまま時間が過ぎていく。</p>
+    <h2 class="section-title">気持ちを、<br>うまく言葉に<br>できていますか？</h2>
+    <p class="section-body">悩んでいても、何が辛いのか自分でもわからない。<br>誰かに話しても「大丈夫」しか返ってこない。<br>感情を整理できないまま、また同じことで悩んでいる。</p>
   </div>
   <div class="pain-list">
-    <div class="pain-item"><span class="pain-num">01</span><div><p class="pain-text">仕事、このままでいいのかわからない</p><p class="pain-sub">転職・副業・独立…選択肢が多すぎて、似た経験をした人の話が聞きたい</p></div></div>
-    <div class="pain-item"><span class="pain-num">02</span><div><p class="pain-text">結婚していいのか、タイミングがわからない</p><p class="pain-sub">仕事と両立できるか、経済的に大丈夫か。同じ状況だった人はどう決めたのか</p></div></div>
-    <div class="pain-item"><span class="pain-num">03</span><div><p class="pain-text">お金・老後の不安を誰にも言えない</p><p class="pain-sub">リアルな数字を話せる場がない。属性が近い人と比べてみたいけど、聞ける場所がない</p></div></div>
+    <div class="pain-item"><span class="pain-num">01</span><div><p class="pain-text">もやもやするけど、何が辛いのかわからない</p><p class="pain-sub">感情に名前をつけることで、悩みの正体が少しずつ見えてくる</p></div></div>
+    <div class="pain-item"><span class="pain-num">02</span><div><p class="pain-text">誰かに話せないことを、どこかに吐き出したい</p><p class="pain-sub">書くだけでいい。AIが静かに、深く受け止めて分析してくれる</p></div></div>
+    <div class="pain-item"><span class="pain-num">03</span><div><p class="pain-text">いつも同じところで引っかかっている気がする</p><p class="pain-sub">思考のクセを可視化することで、自分のパターンに気づける</p></div></div>
   </div>
 </section>
 
 <section class="how" id="how">
   <div class="section-label">使い方</div>
-  <h2 class="section-title">属性が見えるから、<br>刺さる言葉に出会える。</h2>
+  <h2 class="section-title">書くだけで、<br>感情が見えてくる。</h2>
   <div class="how-grid">
     <div class="how-item">
       <div class="how-step">01</div>
-      <h3 class="how-title">プロフィールを設定する</h3>
-      <!-- 01は1文なので改行不要 -->
-      <p class="how-desc">年齢・働き方など、任意の属性を登録。<br>匿名のまま、自分の輪郭だけを見せる。</p>
+      <h3 class="how-title">今の気持ちを書く</h3>
+      <p class="how-desc">長文でも箇条書きでも、「なんかモヤモヤする」でも大丈夫。<br>書きたいだけ書いてみよう。</p>
     </div>
     <div class="how-item">
       <div class="how-step">02</div>
-      <h3 class="how-title">悩みを投稿する、または探す</h3>
-      <!-- ▼ 修正③：「。」で改行 -->
-      <p class="how-desc">「キャリア」「結婚・ライフプラン」「お金」などのカテゴリで投稿・検索。<br>似た境遇のスレッドを見つけて読む。</p>
+      <h3 class="how-title">AIが感情を分析する</h3>
+      <p class="how-desc">感情スタイルの診断、核心感情の抽出、プルチックの感情の輪、思考のクセを自動で分析します。</p>
     </div>
     <div class="how-item">
       <div class="how-step">03</div>
-      <h3 class="how-title">属性ごとに返答が集まる</h3>
-      <!-- ▼ 修正③：「。」で改行 -->
-      <p class="how-desc">「30歳・会社員・既婚（子なし）」の人が答えてくれる。<br>誰が言っているかわかるから、重みが違う。</p>
+      <h3 class="how-title">結果を記録して振り返る</h3>
+      <p class="how-desc">記録はいつでも読み返せます。<br>感情カレンダーや傾向分析で、自分の変化が見えてきます（有料）。</p>
     </div>
   </div>
 </section>
 
 <section class="feature">
   <div class="feature-text">
-    <div class="section-label">安心して話せる設計</div>
-    <h2 class="section-title">女性限定だから、<br>本音が出てくる。</h2>
-    <!-- ▼ 修正④：「。」で改行 -->
-    <p class="section-body">SNSだと見知らぬ人の反発が怖い。掲示板は誰が答えているかわからない。<br>ここは女性だけの、少し狭くて安全な場所。</p>
+    <div class="section-label">分析コンテンツ</div>
+    <h2 class="section-title">8つの感情スタイルで、<br>自分を深く知る。</h2>
+    <p class="section-body">プルチックの感情の輪と認知行動療法の知見をもとに、AIが今の気持ちを多角的に分析します。</p>
     <ul class="feature-points">
-      <li>参加は女性のみ（自己申告制）</li>
-      <li>実名不要・顔出し不要</li>
-      <li>属性タグで「この人の状況」が一目でわかる</li>
-      <li>過去の投稿・履歴でその人の変化も見える</li>
-      <li>反発・炎上しにくいクローズドな空間</li>
+      <li>8つの感情スタイル診断（雨宿り・たき火・共鳴板・深根 など）</li>
+      <li>核心感情の言語化と状態のサマリー</li>
+      <li>思考のクセ（認知の歪み）の可視化</li>
+      <li>「伝える前整理」で感情を言葉に変える（Standardプラン）</li>
+      <li>感情カレンダーと月次レポートで変化を追う（Standardプラン）</li>
     </ul>
-    <div class="reaction-showcase">
-      <p class="reaction-label">「いいね」だけじゃない、共感のかたち</p>
-      <div class="reaction-pills">
-        <span class="rpill">🤝 わかる</span>
-        <span class="rpill">💡 参考になった</span>
-        <span class="rpill">📣 応援してる</span>
-        <span class="rpill active">🤍 つらいね</span>
+    <div class="type-showcase">
+      <p class="type-showcase-label">感情スタイル 8タイプ</p>
+      <div class="type-grid">
+        <div class="type-pill">🌧 雨宿りタイプ</div>
+        <div class="type-pill">🔥 たき火タイプ</div>
+        <div class="type-pill">🎵 共鳴板タイプ</div>
+        <div class="type-pill">🌿 深根タイプ</div>
+        <div class="type-pill">⚡ 閃き星タイプ</div>
+        <div class="type-pill">🌊 潮の流れタイプ</div>
+        <div class="type-pill">🔩 変換炉タイプ</div>
+        <div class="type-pill">❄️ 冬の星タイプ</div>
       </div>
-      <p class="reaction-note">気持ちに合ったリアクションで、言葉にならない共感も伝えられる。</p>
     </div>
   </div>
 </section>
@@ -827,19 +763,19 @@
 <section class="pricing" id="pricing">
   <div class="section-label">料金プラン</div>
   <h2 class="section-title">まずは無料で。</h2>
-  <p class="section-body">無料でも投稿できる。もっと話したくなったら、有料プランへ。</p>
+  <p class="section-body">登録なしでも今日から使える。もっと深く知りたくなったら、有料プランへ。</p>
   <div class="price-cards">
     <div class="price-card">
       <div class="price-tier">Free</div>
       <div class="price-amount">¥0</div>
       <div class="price-period">/ 月、ずっと無料</div>
       <ul class="price-features">
-        <li>全スレッドの閲覧</li>
-        <li>属性タグで検索・絞り込み</li>
-        <li>プロフィール属性タグの設定</li>
-        <li>スレッドへの共感リアクション</li>
-        <li>新規投稿<span class="price-limit-badge">1日3件まで</span></li>
-        <li>返信・コメントし放題</li>
+        <li>AI感情分析<span class="price-limit-badge">月20回（登録後）</span></li>
+        <li>ゲスト利用<span class="price-limit-badge">1日3回まで</span></li>
+        <li>感情スタイル診断（8タイプ）</li>
+        <li>核心感情・思考のクセの可視化</li>
+        <li>過去の記録の閲覧</li>
+        <li>SNSシェア機能</li>
       </ul>
       <a href="https://app.honneroom.com" class="price-btn" style="margin-top:20px">無料で始める</a>
     </div>
@@ -849,21 +785,22 @@
       <div class="price-amount">¥390</div>
       <div class="price-period">/ 月、いつでも解約可能</div>
       <ul class="price-features">
-        <li>すべての無料機能</li>
-        <li>新規投稿・返信し放題</li>
-        <li>7日間無料トライアル付き</li>
+        <li>無制限のAI感情分析</li>
+        <li>「伝える前整理」機能</li>
+        <li>感情カレンダー（月別の感情の変化）</li>
+        <li>傾向・パターン分析</li>
+        <li>月次レポート</li>
       </ul>
-      <a href="https://app.honneroom.com" class="price-btn">7日間無料で試す</a>
+      <a href="https://app.honneroom.com" class="price-btn">Standardプランに登録する</a>
     </div>
   </div>
 </section>
 
 <section class="cta-section" id="signup">
-  <h2 class="section-title">一人で抱えなくていい。<br>似た誰かが、ここにいる。</h2>
-  <p class="section-body">登録は1分。匿名OK、女性限定の静かな場所で、本音を話してみてください。</p>
-  <a href="https://app.honneroom.com" class="btn-primary">無料で参加する →</a>
-  <p class="cta-note">✓ 女性限定　✓ 匿名OK　✓ クレジットカード不要（無料プラン）</p>
-  <a href="https://app.honneroom.com/preview.html" class="btn-ghost" style="justify-content:center;margin-top:16px">登録前にのぞいてみる →</a>
+  <h2 class="section-title">今日の気持ちを、<br>書き留めてみよう。</h2>
+  <p class="section-body">毎日少しずつ書いていると、自分のパターンが見えてくる。<br>登録なしでも今すぐ使えます。</p>
+  <a href="https://app.honneroom.com" class="btn-primary">今すぐ書いてみる（無料）→</a>
+  <p class="cta-note">✓ 登録なしでも利用可　✓ 無料でAI分析　✓ クレジットカード不要（無料プラン）</p>
 </section>
 
 <footer>
@@ -890,5 +827,8 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
+<style>
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
 </body>
 </html>

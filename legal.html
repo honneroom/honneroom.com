@@ -9,10 +9,10 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --ink: #2a1f1a;
-    --cream: #faf6f0;
-    --terra: #b85c38;
-    --mist: #9a8880;
+    --ink: #1a1714;
+    --cream: #f5f0e8;
+    --terra: #c4622d;
+    --mist: #8a7a72;
   }
   body {
     font-family: 'DM Sans', sans-serif;
@@ -28,9 +28,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(250,246,240,0.92);
+    background: rgba(245,240,232,0.92);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(42,31,26,0.08);
+    border-bottom: 1px solid rgba(26,23,20,0.08);
   }
   .nav-logo {
     font-family: 'Shippori Mincho', serif;
@@ -41,17 +41,6 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-  }
-  .nav-logo-mark {
-    width: 28px; height: 28px;
-    background: var(--terra);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    color: white;
-    flex-shrink: 0;
   }
   .nav-back {
     font-size: 13px;
@@ -102,11 +91,11 @@
     font-weight: 300;
     margin-bottom: 56px;
     padding-bottom: 56px;
-    border-bottom: 1px solid rgba(42,31,26,0.08);
+    border-bottom: 1px solid rgba(26,23,20,0.08);
   }
   table { width: 100%; border-collapse: collapse; margin-bottom: 48px; }
-  tr { border-bottom: 1px solid rgba(42,31,26,0.08); }
-  tr:first-child { border-top: 1px solid rgba(42,31,26,0.08); }
+  tr { border-bottom: 1px solid rgba(26,23,20,0.08); }
+  tr:first-child { border-top: 1px solid rgba(26,23,20,0.08); }
   th {
     width: 200px;
     padding: 20px 16px 20px 0;
@@ -129,7 +118,7 @@
   td a { color: var(--terra); }
   footer {
     background: var(--ink);
-    color: rgba(250,246,240,0.5);
+    color: rgba(245,240,232,0.5);
     padding: 48px;
     text-align: center;
   }
@@ -143,18 +132,8 @@
     text-decoration: none;
     margin-bottom: 24px;
   }
-  .footer-logo-mark {
-    width: 22px; height: 22px;
-    background: var(--terra);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    color: white;
-  }
   .footer-links { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 24px; }
-  .footer-links a { color: rgba(250,246,240,0.4); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-links a { color: rgba(245,240,232,0.4); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; transition: color 0.2s; }
   .footer-links a:hover { color: var(--cream); }
   .footer-copy { font-size: 11px; letter-spacing: 0.04em; }
   @media (max-width: 700px) {
@@ -180,7 +159,7 @@
 <div class="container">
   <div class="page-label">Legal</div>
   <h1>特定商取引法に基づく表記</h1>
-  <p class="date">制定日：2026年3月13日</p>
+  <p class="date">制定日：2026年3月13日｜最終更新日：2026年5月27日</p>
 
   <p class="lead">本ページは、本音ルーム上で提供されるサブスクリプション型のデジタルサービスに適用されます。</p>
 
@@ -205,7 +184,7 @@
       <th>メールアドレス</th>
       <td>
         <a href="mailto:support@honneroom.com">support@honneroom.com</a><br>
-        <small style="color:#9a8880;">
+        <small style="color:#8a7a72;">
           ※特定商取引法に基づく申立専用窓口です。通常のお問い合わせは下記お問い合わせページよりご連絡ください。
         </small>
       </td>
@@ -220,11 +199,12 @@
     </tr>
     <tr>
       <th>サービス内容</th>
-      <td>仕事・恋愛・結婚・お金・将来など人生の悩みについて相談・意見交換ができる女性向けプラットフォーム</td>
+      <td>ユーザーが入力したテキストをAIが分析し、感情スタイルの診断・核心感情の言語化・思考のクセの可視化などの結果を提供するAI感情分析ツール（本音ルーム）。Standardプランでは「伝える前整理」・感情カレンダー・傾向分析・月次レポートが追加で利用できます。</td>
     </tr>
     <tr>
       <th>価格</th>
-      <td>各プランの販売価格は、決済画面に表示された金額（消費税込み）となります。</td>
+      <td>各プランの販売価格は、決済画面に表示された金額（消費税込み）となります。<br>
+      <small style="color:#8a7a72;">Standard：¥390／月（税込）</small></td>
     </tr>
     <tr>
       <th>追加手数料</th>
@@ -248,11 +228,11 @@
     </tr>
     <tr>
       <th>解約について</th>
-      <td>いつでも解約可能です。解約時点でサービスのご利用ができなくなります。違約金は一切ございません。</td>
+      <td>いつでも解約可能です。解約後も支払い済みの利用期間が終了するまでStandardプランの機能をご利用いただけます。違約金は一切ございません。</td>
     </tr>
     <tr>
       <th>動作環境</th>
-      <td>最新版の主要なウェブブラウザ（Chrome・Safari・Firefox・Edge）でのご利用を推奨します。スマートフォン・タブレット・PCに対応しています。</td>
+      <td>最新版の主要なウェブブラウザ（Chrome・Safari・Firefox・Edge）でのご利用を推奨します。スマートフォン・タブレット・PCに対応しています。ホーム画面への追加（PWA）にも対応しています。</td>
     </tr>
   </table>
 </div>
@@ -266,4 +246,10 @@
     <a href="/terms.html">利用規約</a>
     <a href="/privacy.html">プライバシーポリシー</a>
     <a href="/legal.html">特定商取引法に基づく表記</a>
-    <a href="/contact.html">お問い合わせ
+    <a href="/contact.html">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2026 本音ルーム. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
